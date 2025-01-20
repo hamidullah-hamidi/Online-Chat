@@ -1,6 +1,5 @@
 import { useState } from 'react'
-
-import './App.css'
+import './styles/App.css'
 
 function App() {
  return <h1>
