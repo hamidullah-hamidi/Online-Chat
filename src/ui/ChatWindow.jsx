@@ -6,7 +6,10 @@ const ChatWindow = () => {
   const [messages,setMessages] = useState(['first message','second'])
   const [inputMessage,setInputMessage] = useState('')
 
-
+  function sendMessageHanlder (){
+    setMessages(messages=>messages+inputMessage)
+    console.log(message);    
+}
 
   return (
     <div className="chat-window">
