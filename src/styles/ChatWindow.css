@@ -1,0 +1,25 @@
+.messages {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    
+  }
+  
+  .messages span {
+    margin-bottom: 20px;    
+   text-align: right;
+   display: block;
+  }
+  
+  .message-input{
+    width: calc(100% - 20px);
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid rgb(178, 168, 168);
+  }
+    
+  .chat-window {
+    flex: 1;
+    padding: 20px;
+  } h2{
+    text-align: center;
+  }
