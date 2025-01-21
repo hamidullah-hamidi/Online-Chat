@@ -15,8 +15,8 @@ const ChatWindow = () => {
       <h2> window</h2>
       <ul className="messages">
             {
-              messages.map(message=>{
-                return <Message message={message}/>
+              messages.map((message)=>{
+                return <Message message={message} key={message}/>
               })
             }
       </ul>

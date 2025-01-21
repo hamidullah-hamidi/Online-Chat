@@ -1,3 +1,9 @@
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  /* background-color: #1e1e1e; */
+}
+
 .messages {
     height: calc(100vh - 150px);
     overflow-y: auto;
@@ -5,9 +11,12 @@
   }
   
   .messages li {
-    margin-bottom: 15px;    
+    margin-bottom: 10px;    
    border: 1px black solid;
    list-style-type: none;
+   width: fit-content;
+   padding: 10px;
+   border-radius: 10px;
   }
   
   .input-container{
@@ -28,12 +37,6 @@
     cursor: pointer;
     transition: all 0.3s;
   }
-
-
-    
-  .chat-window {
-    flex: 1;
-    padding: 20px;
-  } h2{
+ h2{
     text-align: center;
   }
