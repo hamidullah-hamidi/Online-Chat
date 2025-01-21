@@ -3,6 +3,9 @@ import '../styles/ChatWindow.css'
 import ChatMessage from './chatMessage';
 
 const ChatWindow = () => {
+  const [messages,setMessages] = useState(['first message','second'])
+  const [inputMessage,setInputMessage] = useState('')
+
 
 
   return (
