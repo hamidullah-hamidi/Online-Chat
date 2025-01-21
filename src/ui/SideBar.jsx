@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Sidebar.css'
-
+import Login from './login';
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -11,6 +11,8 @@ const Sidebar = () => {
         <li>Farhad</li>
         <li>Ahmad</li>
       </ul>
+      <Login/>
+      <button>create account</button>
     </div>
   );
 };

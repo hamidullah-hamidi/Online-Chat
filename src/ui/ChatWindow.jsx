@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/ChatWindow.css'
 import Message from './Message'
+import Login from './login';
 
 const ChatWindow = () => {
   const [messages,setMessages] = useState([])
@@ -20,6 +21,7 @@ const ChatWindow = () => {
               })
             }
       </ul>
+      {/* <Login/> */}
 
         <div className='input-container'>
         <input type="text" placeholder="write your message" className='message-input' onChange={(e)=>setInputMessage(e.target.value)}/>
