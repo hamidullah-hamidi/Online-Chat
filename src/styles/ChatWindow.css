@@ -1,13 +1,13 @@
 .messages {
     height: calc(100vh - 150px);
     overflow-y: auto;
-    
+    direction: rtl;
   }
   
-  .messages span {
-    margin-bottom: 20px;    
-   text-align: right;
-   display: block;
+  .messages li {
+    margin-bottom: 15px;    
+   border: 1px black solid;
+   list-style-type: none;
   }
   
   .message-input{
