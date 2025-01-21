@@ -11,8 +11,7 @@ const Sidebar = () => {
         <li>Farhad</li>
         <li>Ahmad</li>
       </ul>
-      <Login/>
-      <button>create account</button>
+      <Login />
     </div>
   );
 };

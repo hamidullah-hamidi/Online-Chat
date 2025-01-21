@@ -10,10 +10,9 @@ const Login = () => {
         console.log('submit');
     }
 
-     function closeHandler(){
+     function openHanlder(){
         console.log(isShow);
-        
-        setIsShow(false)
+        setIsShow(true)
      }
     return (
     //    <div>
@@ -42,6 +41,8 @@ const Login = () => {
     //     </div>
     //    </div>
 
+   <div>
+    <button onClick={openHanlder}>click</button>
     <div id="myModal" className={`modal ${isShow ? '' : 'hidden'}`} >
               <div className="modal-content">
                 <span className="close">&times;</span>
@@ -62,11 +63,12 @@ const Login = () => {
   
                   <div className="input-container">
                     <button type="submit" className="btn-register">Register</button>
-                    <button type="button" className="btn-register" onClick={closeHandler}>close</button>
+                    <button type="button" className="btn-register" onClick={()=>setIsShow(false)}>close</button>
                   </div>
                 </form>
               </div>
             </div>
+   </div>
 
     );
 };
