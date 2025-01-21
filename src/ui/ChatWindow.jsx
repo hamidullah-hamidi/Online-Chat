@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/ChatWindow.css'
-import ChatMessage from './chatMessage';
+import Message from './Message'
 
 const ChatWindow = () => {
-  const [messages,setMessages] = useState(['first message','second'])
-  const [inputMessage,setInputMessage] = useState('')
+  const [messages,setMessages] = useState([])
+  const [inputMessage,setInputMessage] = useState('')   
 
   function sendMessageHanlder (){
-    setMessages(messages=>messages+inputMessage)
-    console.log(message);    
+    setMessages(messages => [...messages, inputMessage]); 
 }
 
   return (
@@ -17,14 +16,15 @@ const ChatWindow = () => {
       <ul className="messages">
             {
               messages.map(message=>{
-                <ChatMessage message={message}/>
+                <Message message={message}/>
               })
             }
       </ul>
-        <form>
-        <input type="text" placeholder="write your message" className='message-input'/>
+      
+        <div>
+        <input type="text" placeholder="write your message" className='message-input' onChange={(e)=>setInputMessage(e.target.value)}/>
         <button onClick={sendMessageHanlder}>Send</button>
-        </form>
+        </div>
     </div>
   );
 };
