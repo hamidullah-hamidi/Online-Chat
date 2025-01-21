@@ -21,7 +21,7 @@ const ChatWindow = () => {
             }
       </ul>
 
-        <div>
+        <div className='input-container'>
         <input type="text" placeholder="write your message" className='message-input' onChange={(e)=>setInputMessage(e.target.value)}/>
         <button onClick={sendMessageHanlder}>Send</button>
         </div>

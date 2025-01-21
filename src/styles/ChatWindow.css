@@ -10,12 +10,26 @@
    list-style-type: none;
   }
   
+  .input-container{
+     display: flex;
+  }
   .message-input{
     width: calc(100% - 20px);
     padding: 15px;
     border-radius: 20px;
     border: 1px solid rgb(178, 168, 168);
+  } .input-container button{
+    background-color: rgb(149, 239, 13);
+    padding: 10px;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
   }
+
+
     
   .chat-window {
     flex: 1;
