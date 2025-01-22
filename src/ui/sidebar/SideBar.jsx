@@ -1,6 +1,7 @@
 import React from 'react';
-import '../styles/Sidebar.css'
-import Login from './login';
+import './Sidebar.css'
+import Login from '../login/Login';
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
