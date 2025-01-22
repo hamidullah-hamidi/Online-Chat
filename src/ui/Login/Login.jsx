@@ -4,15 +4,19 @@ import './Login.css';
 import { useCreateAccount } from '../../contexts/CreateUser';
 
 const Login = () => {
+  const[name,setName] = useState('')
+  const[email,setEmail] = useState('')
+  const[lastName,setLastName] = useState('')
+  const[job,setJob] = useState('')
+
     const[isShow,setIsShow] = useState(false)
-    const [{accounts,setAccounts}] = useCreateAccount()
-    function handleSubmit(){
-       setAccounts({
-        name:'ali',
-        lastName:'karimin'
-       })
+    const {accounts,setAccounts} = useCreateAccount()
+
+    function handleSubmit(e){
+    e.preventDefault()
+        setAccounts(accounts=>[...accounts,{name,lastName,email,job}])
     }
-    console.log(accounts);
+console.log(accounts[0]);
 
      function openHanlder(){
         console.log(isShow);
@@ -28,16 +32,21 @@ const Login = () => {
                 <h1 className="form-title">Add a House</h1>
                 <form id="addForm" onSubmit={handleSubmit}>
                   <div className="input-container">
-                    <label >Owner</label>
-                    <input type="text" id="owner" name="owner" required />
+                    <label >name</label>
+                    <input type="text"  required onChange={(e)=>setName(e.target.value)}/>
                   </div>
                   <div className="input-container">
-                    <label >Location</label>
-                    <input type="text" id="location" name="location" required />
+                    <label >lastName</label>
+                    <input type="text"  required  onChange={(e)=>setLastName(e.target.value)}/>
                   </div>
                   <div className="input-container">
-                    <label >Price</label>
-                    <input type="number" id="price" name="price" required />
+                    <label >email</label>
+                    <input type="email"  required  onChange={(e)=>setEmail(e.target.value)}/>
+                  </div>
+
+                  <div className="input-container">
+                    <label>Job</label>
+                    <input type="text"  required  onChange={(e)=>setJob(e.target.value)}/>
                   </div>
   
                   <div className="input-container">
