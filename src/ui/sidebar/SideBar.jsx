@@ -1,4 +1,3 @@
-import React from 'react';
 import './Sidebar.css'
 import Login from '../login/Login';
 

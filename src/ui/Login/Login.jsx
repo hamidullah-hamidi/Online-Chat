@@ -7,7 +7,7 @@ const Login = () => {
     const[isShow,setIsShow] = useState(false)
 
     function handleSubmit(){
-        console.log('submit');
+       
     }
 
      function openHanlder(){
