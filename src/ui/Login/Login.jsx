@@ -1,14 +1,18 @@
 // src/ResponsiveForm.js
 import{ useState } from 'react';
 import './Login.css';
+import { useCreateAcount } from '../../contexts/CreateUser';
 
 const Login = () => {
-
     const[isShow,setIsShow] = useState(false)
-
+    const [accounts,setAccounts] = useCreateAcount()
     function handleSubmit(){
-       
+       setAccounts({
+        name:'ali',
+        lastName:'karimin'
+       })
     }
+    console.log(accounts);
 
      function openHanlder(){
         console.log(isShow);
