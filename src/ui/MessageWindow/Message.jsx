@@ -1,5 +1,5 @@
 
-import './ChatWindow.css'
+import './MessageWindow'
 
 const Message = ({message}) => {
   console.log(message);

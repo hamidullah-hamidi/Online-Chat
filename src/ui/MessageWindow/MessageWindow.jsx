@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import '../styles/ChatWindow.css'
-import Message from '../Message'
+import './messageWindow.css'
+import Message from './Message'
 
 const ChatWindow = () => {
   const [messages,setMessages] = useState([])

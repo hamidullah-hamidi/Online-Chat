@@ -1,4 +1,4 @@
-import './styles/App.css'
+import './App.css'
 import Sidebar from './ui/sidebar/SideBar';
 import MessageWindow from './ui/messageWindow/MessageWindow';
 
