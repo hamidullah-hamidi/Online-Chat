@@ -12,10 +12,12 @@ const CreateUserProvider = ({ children }) => {
     );
 };
 
-function useCreateAcount(){
-    //obect that stored all the value
-    const context = useContext(UserContext)
-    if(context === undefined) throw new Error('context used outside the context parrent')
-     return context
+function useCreateAccount() {
+    const context = useContext(UserContext);
+    if (context === undefined) {
+        throw new Error('context used outside the context parent');
+    }
+    return context;
 }
-export {useCreateAcount,CreateUserProvider}
+
+export { useCreateAccount, CreateUserProvider };
