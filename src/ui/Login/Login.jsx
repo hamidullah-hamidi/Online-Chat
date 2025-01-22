@@ -10,13 +10,13 @@ const Login = () => {
   const[job,setJob] = useState('')
 
     const[isShow,setIsShow] = useState(false)
-    const {accounts,setAccounts} = useCreateAccount()
+    const {setAccounts} = useCreateAccount()
 
     function handleSubmit(e){
     e.preventDefault()
         setAccounts(accounts=>[...accounts,{name,lastName,email,job}])
+        setIsShow(false)
     }
-console.log(accounts[0]);
 
      function openHanlder(){
         console.log(isShow);
@@ -25,7 +25,7 @@ console.log(accounts[0]);
     return (
 
    <div>
-    <button onClick={openHanlder}>click</button>
+    <button onClick={openHanlder}>Create Account</button>
     <div id="myModal" className={`modal ${isShow ? '' : 'hidden'}`} >
               <div className="modal-content">
                 <span className="close">&times;</span>
