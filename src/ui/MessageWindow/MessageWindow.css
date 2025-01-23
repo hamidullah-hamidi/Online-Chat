@@ -1,4 +1,5 @@
 .chat-window {
+  height: 100vh;
   flex: 1;
   padding: 20px;
 }
@@ -9,7 +10,8 @@ h2 {
 }
 
 .messages {
-  height: calc(100vh - 150px);
+  /* height: calc(100vh - 150px); */
+  height: 88%;
   overflow-y: auto;
   direction: rtl;
 }
@@ -49,4 +51,13 @@ h2 {
 
 .input-container button:active {
   transform: scale(0.97);
+}
+
+@media (min-width: 1200px) {
+  .messages,
+  .input-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }

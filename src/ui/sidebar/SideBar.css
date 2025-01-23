@@ -16,3 +16,9 @@
   list-style-type: none;
   border-bottom: 1px solid #cabcbc;
 }
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}
