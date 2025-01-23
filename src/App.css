@@ -1,19 +1,19 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .app {
-    display: flex;
-  }
-  
-  .main {
-    flex: 1;
-    display: flex;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  
- 
+body {
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+}

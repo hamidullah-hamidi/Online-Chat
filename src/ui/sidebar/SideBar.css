@@ -1,19 +1,18 @@
-  
-  .sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-    /* padding: 10px; */
-    border: solid 1px black;
-  }
-  .chat-list {
-    background-color: #e9e9e9;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .chat-list li{
-    padding: 15px;
-    list-style-type: none;
-    border-bottom: 1px solid #cabcbc;
-    
-  }
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  /* padding: 10px; */
+  border: solid 1px black;
+  height: 100%;
+}
+.chat-list {
+  background-color: #e9e9e9;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-list li {
+  padding: 15px;
+  list-style-type: none;
+  border-bottom: 1px solid #cabcbc;
+}
