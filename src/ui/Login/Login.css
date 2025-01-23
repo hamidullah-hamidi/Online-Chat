@@ -69,3 +69,11 @@ input:focus {
   border-width: 2px;
   outline: none;
 }
+
+.create-btn{
+  background: #d3d6d8;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+}

@@ -19,7 +19,7 @@ const Login = () => {
 
   return (
     <div>
-      <button onClick={() => setIsShow(true)}>Create Account</button>
+      <button onClick={() => setIsShow(true)} className='create-btn'>Create Account</button>
       <div id='myModal' className={`modal ${isShow ? '' : 'hidden'}`}>
         <div className='modal-content'>
           <span className='close'>&times;</span>

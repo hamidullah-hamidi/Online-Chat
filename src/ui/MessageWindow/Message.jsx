@@ -1,11 +1,8 @@
+import './MessageWindow';
 
-import './MessageWindow'
-
-const Message = ({message}) => {
+const Message = ({ message }) => {
   console.log(message);
-  return (
-        <li>{message}</li>
-  );
+  return <li>{message}</li>;
 };
 
 export default Message;

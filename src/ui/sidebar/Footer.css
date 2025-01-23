@@ -1,0 +1,8 @@
+.footer {
+  position: absolute;
+  bottom: 10px;
+  background: #d3d6d8;
+  width: 100%;
+  margin: -10px;
+  padding: 5px 10px;
+}
