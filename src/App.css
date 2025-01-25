@@ -1,19 +1,21 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .app {
-    display: flex;
-  }
-  
-  .main {
-    flex: 1;
-    display: flex;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
 
-  
- 
+body {
+  height: 100vh;
+  overflow: hidden;
+  color: black;
+}
+
+.app {
+  display: flex;
+}
+
+/* .main {
+  display: flex;
+  flex: 1;
+} */

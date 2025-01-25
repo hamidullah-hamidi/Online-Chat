@@ -1,143 +1,79 @@
-/* src/ResponsiveForm.module.css
-.formContainer {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    opacity: 1;
-    transform: translateY(0);
-    transform: translateY(-20px);
+.modal {
+  position: fixed;
+  z-index: 2000;
+  left: 0%;
+  top: 0%;
+  /* transform: translateY(-50%,-50%); */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+.modal-content {
+  background-color: #e8f0f8;
+  /* margin: 6% auto; */
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.close {
+  color: #2b2a2a;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  right: 18px;
+  top: 0px;
+}
+.form-title {
+  text-align: center;
+}
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.form-container:not(:last-child) {
-    opacity: 0;
-}
-  .hidden{
-     display: none;
-  }
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-.formGroup {
-    margin-bottom: 15px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  /* margin-bottom: 3px; */
+  font-weight: bold;
+  margin: 0 10px;
+  font-size: 20px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+input:focus {
+  border-width: 2px;
+  outline: none;
 }
 
-textarea {
-    resize: vertical;
+.create-btn{
+  background: #d3d6d8;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 10px;
 }
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-
-@media (max-width: 600px) {
-    .formContainer {
-        padding: 15px;
-    }
-
-    button {
-        padding: 12px;
-    }
-} */
-
-
-.modal {
-    position: fixed;
-    z-index: 2000;
-    left: 0%;
-    top: 0%;
-    /* transform: translateY(-50%,-50%); */
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .hidden{
-    display: none; 
-  }
-  .modal-content {
-    background-color: #e8f0f8;
-    margin: 6% auto;
-    padding: 25px 20px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 1000px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  .close {
-    color: #787676;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    right: 18px;
-    top: 0px;
-  }
-  .form-title {
-    text-align: center;
-    color: black;
-  }
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  label {
-    display: block;
-    margin-bottom: 3px;
-    font-weight: bold;
-    margin-left: 10px;
-    font-size: 20px;
-  }
-  .input-container {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  input[type="text"],
-  input[type="email"],
-  input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-  }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="number"]:focus {
-    border-color: hsl(236, 89%, 54%);
-    border-width: 2.5px;
-    outline: none;
-  }

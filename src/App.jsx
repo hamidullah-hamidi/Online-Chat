@@ -6,12 +6,12 @@ import { CreateUserProvider } from './contexts/CreateUser';
 function App() {
    return (
     <div className="app">
-      <div className="main">
         <CreateUserProvider>
         <Sidebar />
         <MessageWindow />
         </CreateUserProvider>
-      </div>
+      {/* <div className="main">
+      </div> */}
     </div>
   );
 }
