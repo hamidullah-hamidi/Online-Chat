@@ -10,8 +10,6 @@ function App() {
         <Sidebar />
         <MessageWindow />
         </CreateUserProvider>
-      {/* <div className="main">
-      </div> */}
     </div>
   );
 }

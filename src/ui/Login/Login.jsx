@@ -13,7 +13,7 @@ const Login = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setAccounts((accounts) => [...accounts, { name, lastName, email, job }]);
+    setAccounts((accounts) => [...accounts, { name, lastName, email }]);
     setIsShow(false);
   }
 
