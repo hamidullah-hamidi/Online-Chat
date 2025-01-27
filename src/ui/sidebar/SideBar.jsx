@@ -4,6 +4,7 @@ import { useCreateAccount } from '../../contexts/CreateUser';
 import AccountList from './accountList.jsx/AccountList';
 import Footer from './Footer';
 
+//sidebar section
 const Sidebar = () => {
   const { accounts } = useCreateAccount();
 
