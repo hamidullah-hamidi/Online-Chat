@@ -17,7 +17,6 @@
 }
 .modal-content {
   background-color: #e8f0f8;
-  /* margin: 6% auto; */
   padding: 20px;
   border-radius: 20px;
   max-width: 500px;
@@ -51,7 +50,6 @@ form {
 
 label {
   display: block;
-  /* margin-bottom: 3px; */
   font-weight: bold;
   margin: 0 10px;
   font-size: 20px;
