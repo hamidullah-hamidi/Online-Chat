@@ -1,15 +1,13 @@
 // src/ResponsiveForm.js
 import { useState } from 'react';
 import './Login.css';
-import { useCreateAccount } from '../../contexts/CreateUser';
+import { useCreateAccount } from '../contexts/CreateUser';
 
 const Login = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [lastName, setLastName] = useState('');
 
-  //create account
-  const [isShow, setIsShow] = useState(false);
   const { setAccounts } = useCreateAccount();
 
   function handleSubmit(e) {
@@ -21,7 +19,7 @@ const Login = () => {
   return (
     <div>
       <button onClick={() => setIsShow(true)} className='create-btn'>Create Account</button>
-      <div id='myModal' className={`modal ${isShow ? '' : 'hidden'}`}>
+      <div id='myModal' className='modal'>
         <div className='modal-content'>
           <span className='close'>&times;</span>
           <form id='addForm' onSubmit={handleSubmit}>
