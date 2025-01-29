@@ -1,5 +1,4 @@
 import './Sidebar.css';
-import Login from '../../pages/Login';
 import { useCreateAccount } from '../../contexts/CreateUser';
 import AccountList from './accountList.jsx/AccountList';
 import Footer from './Footer';
@@ -17,7 +16,6 @@ const Sidebar = () => {
             return <AccountList account={account} key={account.email} />;
           })}
         </ul>
-        <Login />
         <Footer />
       </div>
     </>
