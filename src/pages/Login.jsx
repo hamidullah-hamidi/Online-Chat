@@ -13,7 +13,6 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setAccounts((accounts) => [...accounts, { name, lastName, email }]);
-    setIsShow(false);
   }
 
   return (
@@ -47,13 +46,6 @@ const Login = () => {
             <div className='input-container'>
               <button type='submit' className='btn-register'>
                 Register
-              </button>
-              <button
-                type='button'
-                className='btn-register'
-                onClick={() => setIsShow(false)}
-              >
-                Close
               </button>
             </div>
           </form>
