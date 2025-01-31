@@ -4,6 +4,8 @@ import { CreateUserProvider } from './contexts/CreateUser';
 import Login from './pages/Login';
 
 function App() {
+
+  //route handler
    return (
     <div className="app">
          <CreateUserProvider>
