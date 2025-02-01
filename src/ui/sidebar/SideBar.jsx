@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 //sidebar section
 const Sidebar = () => {
-  const { accounts } = useCreateAccount();
+  const { accounts } = useCreateAccount();  
 
   return (
     <>

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './Login.css';
 import { useCreateAccount } from '../contexts/CreateUser';
+import { NavLink } from 'react-router';
 
 const Login = () => {
   const [name, setName] = useState('');
@@ -11,16 +12,15 @@ const Login = () => {
   const { setAccounts } = useCreateAccount();
 
   function handleSubmit(e) {
+    console.log('submited');
+    
     e.preventDefault();
     setAccounts((accounts) => [...accounts, { name, lastName, email }]);
   }
 
   return (
-    <div>
-      <button onClick={() => setIsShow(true)} className='create-btn'>Create Account</button>
-      <div id='myModal' className='modal'>
-        <div className='modal-content'>
-          <span className='close'>&times;</span>
+    <div className='form-container'>
+      <NavLink to='appLoyout'>main</NavLink>
           <form id='addForm' onSubmit={handleSubmit}>
             <h1 className='form-title'>User Login</h1>
             <div>
@@ -50,8 +50,6 @@ const Login = () => {
             </div>
           </form>
         </div>
-      </div>
-    </div>
   );
 };
 

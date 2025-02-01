@@ -1,35 +1,7 @@
-.modal {
-  position: fixed;
-  z-index: 2000;
-  left: 0%;
-  top: 0%;
-  width: 100%;
+.form-container{
+  border: solid 1px black;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.hidden {
-  display: none;
-}
-.modal-content {
-  background-color: #e8f0f8;
-  padding: 20px;
-  border-radius: 20px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-.close {
-  color: #2b2a2a;
-  font-size: 50px;
-  font-weight: bold;
-  position: absolute;
-  right: 18px;
-  top: 0px;
+  width: 100%;
 }
 .form-title {
   text-align: center;
@@ -41,8 +13,8 @@
 }
 
 form {
+  margin-top: 100px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
