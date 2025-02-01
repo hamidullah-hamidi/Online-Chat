@@ -20,7 +20,7 @@ const ChatWindow = () => {
         })}
       </ul>
 
-      <div className='input-container'>
+      <form className='form-container'>
         <input
           type='text'
           placeholder='Message...'
@@ -29,7 +29,7 @@ const ChatWindow = () => {
           onChange={(e) => setInputMessage(e.target.value)}
         />
         <button onClick={sendMessageHanlder}>Send</button>
-      </div>
+      </form>
     </div>
   );
 };

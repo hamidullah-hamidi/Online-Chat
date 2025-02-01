@@ -27,7 +27,8 @@ h2 {
   position: relative;
 }
 
-.input-container {
+.form-container {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -40,8 +41,9 @@ h2 {
   border-radius: 20px;
   border: 1px solid #9b9fa1;
 }
-.input-container button {
-  background-color: #d3d6d8;
+.form-container button {
+  /* background-color: #d3d6d8; */
+  background-color: #55585a;
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
@@ -49,13 +51,13 @@ h2 {
   transition: all 0.3s;
 }
 
-.input-container button:active {
+.form-container button:active {
   transform: scale(0.97);
 }
 
 @media (min-width: 1200px) {
   .messages,
-  .input-container {
+  .form-container {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
