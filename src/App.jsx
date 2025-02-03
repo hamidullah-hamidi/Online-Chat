@@ -15,11 +15,19 @@ function App() {
     }
   }
   })
-  
+
    return (
     <div className="app">
       <QueryClientProvider client={queryClint}>
         <ReactQueryDevtools initialIsOpen = {false}/>
+        <CreateUserProvider>
+        <BrowserRouter>
+          <Routes>
+           <Route path = '/' element = {<Login/>}/>
+           <Route path = 'appLoyout' element = {<AppLoyout/>}/>
+          </Routes>
+        </BrowserRouter>
+        </CreateUserProvider>
       </QueryClientProvider>
     </div>
   );
