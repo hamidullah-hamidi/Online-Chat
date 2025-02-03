@@ -10,7 +10,7 @@ const Sidebar = () => {
   return (
     <>
       <div className='sidebar'>
-        <h2>Chat-App</h2>
+        <h2>Users</h2>
         <ul className='chat-list'>
           {accounts.map((account) => {
             return <AccountList account={account} key={account.email} />;
