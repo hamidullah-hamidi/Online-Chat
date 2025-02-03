@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import AppLoyout from './pages/AppLoyout';
 import { CreateUserProvider } from './contexts/CreateUser';
 import Login from './pages/Login';
@@ -7,6 +7,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 function App() {
+  return (
+    <div className='app'>
+      <CreateUserProvider>
   // const queryClint = new QueryClient({  defaultOptions :
   //   {
   //   queries:{
@@ -21,16 +24,18 @@ function App() {
       {/* <QueryClientProvider client={queryClint}> */}
         {/* <ReactQueryDevtools initialIsOpen = {false}/> */}
         <CreateUserProvider>
+
         <BrowserRouter>
           <Routes>
-           <Route path = '/' element = {<Login/>}/>
-           <Route path = 'appLoyout' element = {<AppLoyout/>}/>
+            <Route path='/' element={<Login />} />
+            <Route path='appLoyout' element={<AppLoyout />} />
           </Routes>
         </BrowserRouter>
+      </CreateUserProvider>
         </CreateUserProvider>
       {/* </QueryClientProvider> */}
     </div>
   );
 }
 
-export default App
+export default App;
