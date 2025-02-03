@@ -1,4 +1,3 @@
-// UserContext.js
 import { createContext, useContext, useState } from 'react';
 
 export const UserContext = createContext();
@@ -17,7 +16,7 @@ function useCreateAccount() {
     if (context === undefined) {
         throw new Error('useCreateAccount must be used within a CreateUserProvider');
     }
-    return context; // برمی‌گرداند آرایه‌ای شامل accounts و setAccounts
+    return context;
 }
 
 export { useCreateAccount, CreateUserProvider };

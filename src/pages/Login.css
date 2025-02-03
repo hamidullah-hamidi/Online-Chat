@@ -1,0 +1,48 @@
+.form-container{
+  border: solid 1px black;
+  height: 100%;
+  width: 100%;
+}
+.form-title {
+  text-align: center;
+}
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+input:focus {
+  border-width: 2px;
+  outline: none;
+}
+
+.create-btn{
+  background: #d3d6d8;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
