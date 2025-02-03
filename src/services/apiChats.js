@@ -1,3 +1,5 @@
+import supabase from "./supabase"
+
 export default async function getChats(){
 let { data, error } = await supabase
 .from('chats')
