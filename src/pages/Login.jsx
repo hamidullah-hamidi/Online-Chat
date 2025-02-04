@@ -4,6 +4,7 @@ import './Login.css';
 import { useCreateAccount } from '../contexts/CreateUser';
 import { NavLink } from 'react-router';
 import { createUser } from '../services/apiUsers';
+import { redirect } from 'react-router';
 
 const Login = () => {
   const [name, setName] = useState('');
@@ -15,6 +16,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault()
     createUser(name,password,lastName)
+    redirect('/appLoyout')
     // setAccounts((accounts) => [...accounts, { name, lastName, password }]);
   }
 
