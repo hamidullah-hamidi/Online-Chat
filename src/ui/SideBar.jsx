@@ -1,6 +1,6 @@
 import './Sidebar.css';
-import { useCreateAccount } from '../../contexts/CreateUser';
-import AccountList from './accountList.jsx/AccountList';
+import { useCreateAccount } from '../contexts/CreateUser';
+import AccountList from './UserList';
 import Footer from './Footer';
 
 //sidebar section

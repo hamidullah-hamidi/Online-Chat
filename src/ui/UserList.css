@@ -1,0 +1,8 @@
+.list-data{
+    /* border: solid 1px rgb(177, 175, 175); */
+    display: flex;
+}.list-data img{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}

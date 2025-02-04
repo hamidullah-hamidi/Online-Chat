@@ -1,9 +1,10 @@
-import Sidebar from "../ui/sidebar/SideBar";
-import MessageWindow from '../ui/MessageWindow/MessageWindow'
+import Sidebar from "../ui/SideBar";
+import MessageWindow from '../ui/MessageWindow'
 import './appLoyout.css'
 import getUsers from "../services/apiUsers";
 import { useEffect } from "react";
 import getChats from "../services/apiChats";
+
 export default function AppLoyout(){
 
    useEffect(()=>{
