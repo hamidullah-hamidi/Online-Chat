@@ -1,6 +1,6 @@
 import supabase from "./supabase"
 
-async function getUsers(){
+export async function getUsers(){
     let { data, error } = await supabase
     .from('users')
     .select('*')
@@ -11,4 +11,19 @@ async function getUsers(){
     }
     return data
 }
-export default getUsers
+
+export async function createUser(name,lastName,password) {
+ try{
+    console.log(name,lastName,password);
+    
+    const { data, error } = await supabase.from('users').insert([ { name, lastName,password },]).select()
+    console.log(data);
+    if (error) {
+        console.error('Error inserting data:', error);
+        return null;
+      }
+      return data
+}catch(err){
+ console.log(err);
+ }
+}

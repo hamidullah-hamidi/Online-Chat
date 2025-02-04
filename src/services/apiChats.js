@@ -1,6 +1,6 @@
 import supabase from "./supabase"
 
-export default async function getChats(){
+export async function getChats(){
 let { data, error } = await supabase
 .from('chats')
 .select('*')

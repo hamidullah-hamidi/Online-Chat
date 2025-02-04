@@ -3,19 +3,21 @@ import { useState } from 'react';
 import './Login.css';
 import { useCreateAccount } from '../contexts/CreateUser';
 import { NavLink } from 'react-router';
+import { createUser } from '../services/apiUsers';
 
 const Login = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [lastName, setLastName] = useState('');
-
+  const [password, setPassword] = useState('');
+  
   const { setAccounts } = useCreateAccount();
 
   function handleSubmit(e) {
-    console.log('submited');
+    e.preventDefault()
+    console.log(name,password,lastName);
     
-    e.preventDefault();
-    setAccounts((accounts) => [...accounts, { name, lastName, email }]);
+    createUser(name,password,lastName)
+    setAccounts((accounts) => [...accounts, { name, lastName, password }]);
   }
 
   return (
@@ -37,10 +39,10 @@ const Login = () => {
                 onChange={(e) => setLastName(e.target.value)}
               />
               <input
-                type='email'
-                placeholder='Email'
+                type='string'
+                placeholder='password'
                 required
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className='input-container'>
