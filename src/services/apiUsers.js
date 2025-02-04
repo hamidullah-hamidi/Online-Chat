@@ -14,10 +14,8 @@ export async function getUsers(){
 
 export async function createUser(name,lastName,password) {
  try{
-    console.log(name,lastName,password);
     
     const { data, error } = await supabase.from('users').insert([ { name, lastName,password },]).select()
-    console.log(data);
     if (error) {
         console.error('Error inserting data:', error);
         return null;

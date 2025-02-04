@@ -2,10 +2,21 @@ import './Sidebar.css';
 import { useCreateAccount } from '../contexts/CreateUser';
 import AccountList from './UserList';
 import Footer from './Footer';
+import { useEffect, useState } from 'react';
+import { getUsers } from '../services/apiUsers';
 
 //sidebar section
 const Sidebar = () => {
-  const { accounts } = useCreateAccount();  
+  // const { accounts } = useCreateAccount(); 
+  const [accounts,setAccounts] = useState([])
+
+useEffect(()=>{
+async function getAllUsers() {
+  const data = await getUsers()
+  setAccounts(data)
+}
+getAllUsers()
+},[])
 
   return (
     <>

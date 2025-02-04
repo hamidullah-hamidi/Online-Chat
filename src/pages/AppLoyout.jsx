@@ -7,15 +7,6 @@ import { useEffect } from "react";
 
 export default function AppLoyout(){
 
-   useEffect(()=>{
-    getUsers().then(data=>{
-        console.log(data);
-    })
-    getChats().then(data=>{
-        console.log(data);
-    })
-   },[])
-
     return <div className="appLayout">
         <Sidebar />
         <MessageWindow />

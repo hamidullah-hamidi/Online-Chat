@@ -10,14 +10,12 @@ const Login = () => {
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   
-  const { setAccounts } = useCreateAccount();
+  // const { setAccounts } = useCreateAccount();
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(name,password,lastName);
-    
     createUser(name,password,lastName)
-    setAccounts((accounts) => [...accounts, { name, lastName, password }]);
+    // setAccounts((accounts) => [...accounts, { name, lastName, password }]);
   }
 
   return (

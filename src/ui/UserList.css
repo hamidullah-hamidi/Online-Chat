@@ -1,6 +1,6 @@
 .list-data{
-    /* border: solid 1px rgb(177, 175, 175); */
     display: flex;
+    border-bottom: 1px solid rgb(222, 220, 220);
 }.list-data img{
     border-radius: 50%;
     height: 60px;
