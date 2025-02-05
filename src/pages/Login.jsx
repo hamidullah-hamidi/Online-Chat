@@ -4,19 +4,19 @@ import './Login.css';
 import { useCreateAccount } from '../contexts/CreateUser';
 import { NavLink, useNavigate } from 'react-router';
 import { createUser } from '../services/apiUsers';
-import { redirect } from 'react-router';
 
 const Login = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
   const navigate = useNavigate()
   
   // const { setAccounts } = useCreateAccount();
 
   function handleSubmit(e) {
     e.preventDefault()
-    createUser(name,password,lastName)
+    createUser(name,password,lastName,email)
     navigate('/appLoyout')
     // setAccounts((accounts) => [...accounts, { name, lastName, password }]);
   }
@@ -44,6 +44,12 @@ const Login = () => {
                 placeholder='password'
                 required
                 onChange={(e) => setPassword(e.target.value)}
+              />
+                    <input
+                type='email'
+                placeholder='email'
+                required
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className='input-container'>

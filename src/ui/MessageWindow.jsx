@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './messageWindow.css';
 import Message from './Message';
+import { createChat } from '../services/apiChats';
 
 const ChatWindow = () => {
   const [messages, setMessages] = useState([]);
@@ -9,6 +10,7 @@ const ChatWindow = () => {
   function sendMessageHanlder() {
     setMessages((messages) => [...messages, inputMessage]);
     setInputMessage('');
+    createChat(inputMessage)
   }
 
   return (
