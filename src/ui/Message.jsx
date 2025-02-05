@@ -3,7 +3,7 @@ import './MessageWindow';
 //main window
 const Message = ({ message }) => {
   console.log(message);
-  return <li>{message}</li>;
+  return <li>{message.chat}</li>;
 };
 
 export default Message;

@@ -1,24 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './messageWindow.css';
 import Message from './Message';
-import { createChat } from '../services/apiChats';
+import { createChat, getChats } from '../services/apiChats';
 
 const ChatWindow = () => {
-  const [messages, setMessages] = useState([]);
-  const [inputMessage, setInputMessage] = useState('');
+  const [allMessages, setAllMessages] = useState([]);
+  const [chat, setChat] = useState('');
 
   function sendMessageHanlder() {
-    setMessages((messages) => [...messages, inputMessage]);
-    setInputMessage('');
-    createChat(inputMessage)
+    createChat(chat)
   }
+
+  useEffect(()=>{
+  async function getAllUsers() {
+    const data = await getChats()
+    setAllMessages(data)
+  }
+  getAllUsers()
+  },[chat])
 
   return (
     <div className='chat-window'>
       <h2>Chat Page</h2>
-      <ul className='messages'>
-        {messages.map((message) => {
-          return <Message message={message} key={message} />;
+      <ul className='allMessages'>
+        {allMessages.map((message) => {
+          return <Message message={message} key={message.id} />;
         })}
       </ul>
 
@@ -27,8 +33,8 @@ const ChatWindow = () => {
           type='text'
           placeholder='Message...'
           className='message-input'
-          value={inputMessage}
-          onChange={(e) => setInputMessage(e.target.value)}
+          value={chat}
+          onChange={(e) => setChat(e.target.value)}
         />
         <button onClick={sendMessageHanlder}>Send</button>
       </div>

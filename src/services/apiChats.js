@@ -12,12 +12,16 @@ if(error){
 return data
 }
 
-export async function createChat(){
+export async function createChat(chat){
+    console.log(chat);
+    
     const { data, error } = await supabase.from('chats').insert([
-      { some_column: 'someValue', other_column: 'otherValue' },]).select()
+      { chat },]).select()
+
       if(error){
         console.log('something went wrong whit creating chats');
         return null
     }
+
     return data
     }
