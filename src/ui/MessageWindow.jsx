@@ -17,13 +17,13 @@ const ChatWindow = () => {
     setAllMessages(data)
   }
   getAllUsers()
-  },[chat])
+  },[])
 
   return (
     <div className='chat-window'>
       <h2>Chat Page</h2>
       <ul className='allMessages'>
-        {allMessages.map((message) => {
+        {allMessages.map((message) => {          
           return <Message message={message} key={message.id} />;
         })}
       </ul>
