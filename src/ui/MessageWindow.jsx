@@ -8,16 +8,17 @@ const ChatWindow = () => {
   const [chat, setChat] = useState('');
 
   function sendMessageHanlder() {
+    setAllMessages(messages=>[...messages,chat])
     createChat(chat)
   }
-
+  
   useEffect(()=>{
   async function getAllUsers() {
     const data = await getChats()
     setAllMessages(data)
   }
   getAllUsers()
-  },[])
+  },[allMessages])
 
   return (
     <div className='chat-window'>
