@@ -7,15 +7,17 @@ const ChatWindow = () => {
   const [allMessages, setAllMessages] = useState([]);
   const [chat, setChat] = useState('');
 
-  function sendMessageHanlder() {
-    setAllMessages(messages=>[...messages,chat])
+  async function sendMessageHanlder() {
     createChat(chat)
+    const data = await getChats()
+    // setAllMessages(messages=>[...messages,chat])
+    setAllMessages(data)
+    console.log(data);
   }
   
   useEffect(()=>{
   async function getAllUsers() {
     const data = await getChats()
-    console.log(data);
     setAllMessages(data)
   }
   getAllUsers()

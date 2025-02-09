@@ -2,10 +2,9 @@ import { useState } from 'react';
 import './Login.css';
 import { NavLink, useNavigate } from 'react-router';
 import { createUser } from '../services/apiUsers';
+import './CreateAccount.css'
 
-const Login = () => {
-  console.log('Wellcome');
-  
+const CreateAccount = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
@@ -24,7 +23,7 @@ const Login = () => {
       <NavLink to='/'>intro</NavLink>
 
           <form id='addForm' onSubmit={handleSubmit}>
-            <h1 className='form-title'>User Login</h1>
+            <h1 className='form-title'>CreateAccount</h1>
             <div>
               <input
                 type='text'
@@ -61,4 +60,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CreateAccount;

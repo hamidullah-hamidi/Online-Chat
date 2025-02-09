@@ -7,7 +7,7 @@ export default function Intro(){
           <h1>Wellcome To Chat App!</h1>
           <p>By using this app you can chat with your friends and share your toughts and ideas to your friends</p>
           <NavLink to='/login' className='links'>You have an account?</NavLink>
-          <NavLink to='/login' className='links'>Create Account</NavLink>
+          <NavLink to='/createAccount' className='links'>Create Account</NavLink>
          </div>
           )
 }
