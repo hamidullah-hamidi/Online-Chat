@@ -26,7 +26,8 @@ function App() {
         <CreateUserProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Login />} />
+            <Route path='/' element={<IntroPage/>} />
+            <Route path='/login' element={<Login />} />
             <Route path='appLoyout' element={<AppLoyout />} />
           </Routes>
         </BrowserRouter>
