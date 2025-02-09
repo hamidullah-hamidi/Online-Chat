@@ -18,13 +18,17 @@ h2 {
 
 .messages li {
   margin-bottom: 10px;
-  /* border: 1px rgb(37, 37, 37) solid; */
-  background: #d3d6d8;
+  background: #9ea0a1;
   list-style-type: none;
   width: fit-content;
   padding: 7px 10px;
   border-radius: 10px 10px 0 10px;
   position: relative;
+}.time{
+  font-size: 0.75em;
+  position: relative;
+  top: 5px;
+  right: 2px;
 }
 
 .input-container {

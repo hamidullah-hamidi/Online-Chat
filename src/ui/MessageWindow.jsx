@@ -15,15 +15,16 @@ const ChatWindow = () => {
   useEffect(()=>{
   async function getAllUsers() {
     const data = await getChats()
+    console.log(data);
     setAllMessages(data)
   }
   getAllUsers()
-  },[allMessages])
+  },[])
 
   return (
     <div className='chat-window'>
       <h2>Chat Page</h2>
-      <ul className='allMessages'>
+      <ul className='messages'>
         {allMessages.map((message) => {          
           return <Message message={message} key={message.id} />;
         })}

@@ -7,7 +7,6 @@ let { data, error } = await supabase
 
 if(error){
     throw new Error('could not laod chat data!')
-    console.error(error)
 }
 return data
 }
