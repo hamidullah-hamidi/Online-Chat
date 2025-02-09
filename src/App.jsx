@@ -5,7 +5,7 @@ import Login from './pages/Login';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-
+import Intro from './pages/Intro';
 
 
 function App() {
@@ -26,9 +26,9 @@ function App() {
         <CreateUserProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<IntroPage/>} />
+            <Route path='/' element={<Intro />} />
             <Route path='/login' element={<Login />} />
-            <Route path='appLoyout' element={<AppLoyout />} />
+            <Route path='/appLoyout' element={<AppLoyout />} />
           </Routes>
         </BrowserRouter>
       </CreateUserProvider>

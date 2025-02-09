@@ -1,7 +1,6 @@
 // src/ResponsiveForm.js
 import { useState } from 'react';
 import './Login.css';
-import { useCreateAccount } from '../contexts/CreateUser';
 import { NavLink, useNavigate } from 'react-router';
 import { createUser } from '../services/apiUsers';
 
@@ -11,19 +10,18 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const navigate = useNavigate()
-  
-  // const { setAccounts } = useCreateAccount();
 
   function handleSubmit(e) {
     e.preventDefault()
     createUser(name,password,lastName,email)
     navigate('/appLoyout')
-    // setAccounts((accounts) => [...accounts, { name, lastName, password }]);
   }
 
   return (
     <div className='form-container'>
-      <NavLink to='appLoyout'>main</NavLink>
+      <NavLink to='/appLoyout'>main</NavLink>
+      <NavLink to='/'>intro</NavLink>
+
           <form id='addForm' onSubmit={handleSubmit}>
             <h1 className='form-title'>User Login</h1>
             <div>
