@@ -9,7 +9,6 @@ import Intro from './pages/Intro';
 
 
 function App() {
-
   const queryClint = new QueryClient({  defaultOptions :
     {
     queries:{
