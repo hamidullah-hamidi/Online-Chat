@@ -1,9 +1,8 @@
 .form-container {
-    background: linear-gradient(to right, #427ca2, #26588a);
+    background: linear-gradient(to right, #4d80a1, #03376c);
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     height: 100vh;
     width: 100%;
   }
@@ -27,7 +26,6 @@
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
-    margin-bottom: 15px;
     background: #f7f9fa;
   }
   input:focus {
@@ -40,11 +38,10 @@
     opacity: 0.;
   }
   
-  .create-btn {
+  .btn-register {
     background: #d3d6d8;
     border: none;
     padding: 5px 10px;
-    margin-top: 5px;
     border-radius: 10px;
   }
   

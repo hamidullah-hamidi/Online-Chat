@@ -1,20 +1,28 @@
 import { useState } from 'react';
-import './Login.css';
+import './CreateAccount.css';
 import { NavLink, useNavigate } from 'react-router';
-import { createUser } from '../services/apiUsers';
-import './CreateAccount.css'
+import { createUser, getUser } from '../services/apiUsers';
 
 const CreateAccount = () => {
+  console.log('Wellcome');
+  
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const navigate = useNavigate()
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    createUser(name,password,lastName,email)
-    navigate('/appLoyout')
+     const isEmail = await getUser(email)
+     if(!isEmail){
+        createUser(name,password,lastName,email)
+        navigate('/appLoyout')
+     }else{
+        console.log('This account is already exist');
+     }
+          
+
   }
 
   return (
@@ -23,7 +31,7 @@ const CreateAccount = () => {
       <NavLink to='/'>intro</NavLink>
 
           <form id='addForm' onSubmit={handleSubmit}>
-            <h1 className='form-title'>CreateAccount</h1>
+            <h1 className='form-title'>User Create Account</h1>
             <div>
               <input
                 type='text'
