@@ -25,6 +25,15 @@ export async function createUser(name, lastName, password, email) {
     }
 }
 
+export async function login(name,password) {
+    let { data, error } = await supabase.from('users').select('name,password')
+     if(error){
+        return null
+     }
+     
+     return data.some(el=> el.name === name && el.password === password)
+} 
+
 export async function getUser(email) {
     try {
         let { data: emailArray, error } = await supabase.from('users').select('email')

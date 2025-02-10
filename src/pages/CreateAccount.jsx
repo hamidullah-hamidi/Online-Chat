@@ -19,7 +19,7 @@ const CreateAccount = () => {
         createUser(name,password,lastName,email)
         navigate('/appLoyout')
      }else{
-        console.log('This account is already exist');
+         alert('This account is already exist, try another email!');
      }
           
 

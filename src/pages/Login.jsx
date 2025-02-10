@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router';
-import { createUser } from '../services/apiUsers';
+import { createUser, login } from '../services/apiUsers';
 import './Login.css'
 
 const Login = () => {
@@ -12,8 +12,12 @@ const Login = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    createUser(name,password,lastName,email)
-    navigate('/appLoyout')
+    const isUserExist = login(name,password)
+    console.log(isUserExist);
+    
+    if(isUserExist){
+      navigate('/appLoyout')
+    }
   }
 
   return (
