@@ -24,7 +24,7 @@ getAllUsers()
         <h2>Users</h2>
         <ul className='chat-list'>
           {accounts.map((account) => {
-            return <AccountList account={account} key={account.email} />;
+            return <AccountList account={account} key={account.id} />;
           })}
         </ul>
         <Footer />

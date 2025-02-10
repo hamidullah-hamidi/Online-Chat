@@ -10,13 +10,15 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate()
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    const isUserExist = login(name,password)
+    const isUserExist = await login(name,password)
     console.log(isUserExist);
     
     if(isUserExist){
       navigate('/appLoyout')
+    }else{
+      alert('Your are not logged in. please create and acount')
     }
   }
 
