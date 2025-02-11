@@ -7,7 +7,6 @@ import { getUsers } from '../services/apiUsers';
 
 //sidebar section
 const Sidebar = () => {
-  // const { accounts } = useCreateAccount(); 
   const [accounts,setAccounts] = useState([])
 
 useEffect(()=>{

@@ -4,30 +4,28 @@ import Message from './Message';
 import { createChat, getChats } from '../services/apiChats';
 
 const ChatWindow = () => {
-  const [allMessages, setAllMessages] = useState([]);
-  const [chat, setChat] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState('');
 
-  async function sendMessageHanlder() {
-    createChat(chat)
-    const data = await getChats()
-    // setAllMessages(messages=>[...messages,chat])
-    setAllMessages(data)
-    console.log(data);
+  async function sendMessageHandler() {
+     await createChat(newMessage);
+    setNewMessage('')
   }
   
-  useEffect(()=>{
-  async function getAllUsers() {
-    const data = await getChats()
-    setAllMessages(data)
-  }
-  getAllUsers()
-  },[])
+  useEffect(() => {
+    async function getAllUsers() {
+      const data = await getChats();
+      setMessages(data);
+    }
+    getAllUsers();
+  }, [newMessage]);
+  
 
   return (
     <div className='chat-window'>
       <h2>Chat Page</h2>
       <ul className='messages'>
-        {allMessages.map((message) => {          
+        {messages.map((message) => {          
           return <Message message={message} key={message.id} />;
         })}
       </ul>
@@ -37,10 +35,10 @@ const ChatWindow = () => {
           type='text'
           placeholder='Message...'
           className='message-input'
-          value={chat}
-          onChange={(e) => setChat(e.target.value)}
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
         />
-        <button onClick={sendMessageHanlder}>Send</button>
+        <button onClick={sendMessageHandler}>Send</button>
       </div>
     </div>
   );
