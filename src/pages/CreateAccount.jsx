@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './CreateAccount.css';
 import { NavLink, useNavigate } from 'react-router';
-import { createUser, getUser } from '../services/apiUsers';
+import { createUser, checkUserEmail } from '../services/apiUsers';
 
 const CreateAccount = () => {
   console.log('Wellcome');
@@ -14,7 +14,7 @@ const CreateAccount = () => {
 
   async function handleSubmit(e) {
     e.preventDefault()
-     const isEmail = await getUser(email)
+     const isEmail = await checkUserEmail(email)
      if(!isEmail){
         createUser(name,password,lastName,email)
         navigate('/appLoyout')

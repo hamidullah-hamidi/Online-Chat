@@ -12,9 +12,9 @@ const UserList = ({account}) => {
   return (
     <div className='list-data' onClick={handleButtonClick}>
     <img src="https://bbglrqpjxqaptcbbzpme.supabase.co/storage/v1/object/public/users-images//photo_2025-01-29_23-29-32.jpg" alt="no-img" />
-    <li>{account.name}-{account.lastName}</li>
+    <li>{account.name} {account.lastName}</li>
      {
-       showDiv && <Model/>
+       showDiv && <Model account={account}/>
      }
     </div>
   );

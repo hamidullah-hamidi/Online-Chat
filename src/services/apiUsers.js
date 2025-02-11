@@ -34,12 +34,23 @@ export async function login(name,password) {
      return data.some(el=> el.name === name && el.password === password)
 } 
 
-export async function getUser(email) {
+export async function checkUserEmail(email) {
     try {
         let { data: emailArray, error } = await supabase.from('users').select('email')
         if (error) throw new Error(error)
          const isExist = emailArray.some(el => el.email === email)
           return isExist
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+export async function getUser(id) {
+    try {
+        let { data, error } = await supabase.from('users').eq({id:id}).single()
+        if (error) throw new Error(error)
+          return data
 
     } catch (err) {
         console.log(err);
