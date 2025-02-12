@@ -5,7 +5,6 @@ export async function getUsers() {
 
   if (error) {
     throw new Error('users could not be loaded');
-    console.error(error);
   }
   return data;
 }
