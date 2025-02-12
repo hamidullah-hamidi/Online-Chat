@@ -7,7 +7,20 @@ let { data, error } = await supabase
 
 if(error){
     throw new Error('could not laod chat data!')
-    console.error(error)
 }
 return data
 }
+
+export async function createChat(chat){
+    console.log(chat);
+    
+    const { data, error } = await supabase.from('chats').insert([
+      { chat },]).select()
+
+      if(error){
+        console.log('something went wrong whit creating chats');
+        return null
+    }
+
+    return data
+    }

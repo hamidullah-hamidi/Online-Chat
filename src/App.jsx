@@ -5,11 +5,11 @@ import Login from './pages/Login';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-
+import Intro from './pages/Intro';
+import CreateAccount from './pages/CreateAccount';
 
 
 function App() {
-
   const queryClint = new QueryClient({  defaultOptions :
     {
     queries:{
@@ -26,8 +26,10 @@ function App() {
         <CreateUserProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='appLoyout' element={<AppLoyout />} />
+            <Route path='/' element={<Intro />} />
+            <Route path='/appLoyout' element={<AppLoyout />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/createAccount' element={<CreateAccount />} />
           </Routes>
         </BrowserRouter>
       </CreateUserProvider>
